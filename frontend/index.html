@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="stringCalcApp">
+<head>
+  <meta charset="UTF-8">
+  <title>String Calculator Kata</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body ng-controller="CalculatorController as calcCtrl" class="container">
+  <h2 class="text-center">🧮 String Calculator Kata</h2>
+
+  <div class="form-group">
+    <label>Enter your number string:</label>
+    <textarea class="form-control" ng-model="calcCtrl.input" rows="3"></textarea>
+  </div>
+
+  <button class="btn btn-primary" ng-click="calcCtrl.calculate()">Calculate</button>
+
+  <div class="result" ng-if="calcCtrl.result !== null">
+    <h4 class="text-success">Result: {{ calcCtrl.result }}</h4>
+  </div>
+
+  <div class="error" ng-if="calcCtrl.error">
+    <h4 class="text-danger">Error: {{ calcCtrl.error }}</h4>
+  </div>
+</body>
+</html>
