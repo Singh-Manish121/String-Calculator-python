@@ -1,0 +1,12 @@
+body {
+  margin-top: 50px;
+  max-width: 600px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.result, .error {
+  margin-top: 20px;
+}
